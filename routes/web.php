@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MajorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/category', [CategoryController::class, 'index']);
+
+Route::get('/major', [MajorController::class, 'index']);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
