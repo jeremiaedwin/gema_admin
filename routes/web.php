@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\MajorController;
+use App\Http\Controllers\ProdiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Auth::routes();
 Route::get('/category', [CategoryController::class, 'index']);
 
 Route::get('/major', [MajorController::class, 'index']);
+
+Route::get('/prodi', [ProdiController::class, 'index']);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
